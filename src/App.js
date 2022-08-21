@@ -3,6 +3,7 @@ import './App.css';
 import Button from './components/Button';
 import Input from './components/Input';
 import * as math from 'mathjs';
+import { ButtonConfig } from './components/ButtonConfig';
 const App = () => {
   const btnColor = '#f2a33c';
 
@@ -19,6 +20,7 @@ const App = () => {
   };
 
   const calculateResult = () => {
+    if (!text) return;
     const input = text.join(''); // Remove Commas
     setResult(math.evaluate(input));
   };
@@ -26,7 +28,23 @@ const App = () => {
     <div className="App">
       <div className="calc-wrapper">
         <Input text={text} result={result}></Input>
-        <div className="row">
+        <div className="parent">
+          {ButtonConfig.map((item) => {
+            return (
+              <div key={item.id}>
+                <Button
+                  symbol={item.symbol}
+                  handleClick={
+                    item.handleClick == 'add' ? addToText : calculateResult
+                  }
+                  color={item.color ? btnColor : ''}
+                ></Button>
+              </div>
+            );
+          })}
+        </div>
+        // Static With Flex Container
+        {/* <div className="row">
           <Button symbol="7" handleClick={addToText}></Button>
           <Button symbol="8" handleClick={addToText}></Button>
           <Button symbol="9" handleClick={addToText}></Button>
@@ -49,7 +67,7 @@ const App = () => {
           <Button symbol="." handleClick={addToText}></Button>
           <Button symbol="=" handleClick={calculateResult}></Button>
           <Button symbol="-" color={btnColor} handleClick={addToText}></Button>
-        </div>
+        </div> */}
         <Button symbol="Clear" color="lightgreen" handleClick={resetInput} />
       </div>
     </div>

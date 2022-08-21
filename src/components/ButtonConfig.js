@@ -1,0 +1,98 @@
+export const ButtonConfig = [
+  {
+    symbol: '7',
+    id: 1,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '8',
+    id: 2,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '9',
+    id: 3,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '/',
+    id: 4,
+    color: true,
+    handleClick: 'add',
+  },
+  {
+    symbol: '4',
+    id: 5,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '5',
+    id: 6,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '6',
+    id: 7,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '*',
+    id: 8,
+    color: true,
+    handleClick: 'add',
+  },
+  {
+    symbol: '1',
+    id: 9,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '2',
+    id: 10,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '3',
+    id: 11,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '+',
+    id: 12,
+    color: true,
+    handleClick: 'add',
+  },
+  {
+    symbol: '0',
+    id: 13,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '.',
+    id: 14,
+    color: false,
+    handleClick: 'add',
+  },
+  {
+    symbol: '=',
+    id: 15,
+    color: false,
+    handleClick: 'result',
+  },
+  {
+    symbol: '-',
+    id: 16,
+    color: true,
+    handleClick: 'add',
+  },
+];
